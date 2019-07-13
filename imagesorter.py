@@ -1,6 +1,6 @@
 import os, shutil
 
-source = 'C:\\Users\\Tharx\\Downloads\\'
+source = 'C:\\Users\\Tharx\\Downloads\\' # Location of where the files are located
 destination = 'C:\\Users\\Tharx\\Downloads\\Pictures'
 
 files = os.listdir(source)
