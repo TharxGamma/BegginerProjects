@@ -7,6 +7,6 @@ files = os.listdir(source)
 
 for f in files:
 
-    if os.path.splitext(f)[1] in (".png"):
+    if os.path.splitext(f)[1] in (".jpg"):
 
         shutil.move(source + f, destination)
