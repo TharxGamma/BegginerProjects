@@ -65,12 +65,12 @@ equation.set('enter your expression')
 # This sets up our buttons a lot of this is obvious, the textvariable is how we set the buttons with StringVar, sticky is the alignment of the text which uses compass positions
 # Command tells the buttons what to do and lambda is (pasted from the internet)
 # In Python, anonymous function means that a function is without a name. 
-# As we already know that def keyword is used to define the normal functions and the lambda keyword is used to create anonymous functions.
+# As we already know that def keyword is used to define the normal functions and the lambda keyword is used to create anonymous functions. (https://www.geeksforgeeks.org/python-lambda-anonymous-functions-filter-map-reduce/)
 # Grid is all about positioning 
 screenDisplay = Entry(root, textvariable = equation) 
 screenDisplay.grid(columnspan = 5, sticky = E)
 
-numberPad1 = Button(root, text = "1", command = lambda: press(1))
+numberPad1 = Button(root, text = "1", command =  lambda: press(1))
 numberPad1.grid(row = 4, column = 1)
 
 numberPad2 = Button(root, text = "2", command = lambda: press(2))
@@ -97,11 +97,20 @@ numberPad8.grid(row = 2, column = 2)
 numberPad9 = Button(root, text = "9", command = lambda: press(9))
 numberPad9.grid(row = 2, column = 3)
 
+numberPad0 = Button(root, text = "0", command = lambda: press(0))
+numberPad0.grid(row = 5, column = 2)
+
 numberPadAdd = Button(root, text = "+", command = lambda: press("+"))
 numberPadAdd.grid(row = 3, column = 4)
 
 numberPadMinus = Button(root, text = "- ", command = lambda: press("-"))
 numberPadMinus.grid(row = 2, column = 4)
+
+numberPadDivide = Button(root, text = "/ ", command = lambda: press("/"))
+numberPadDivide.grid(row = 2, column = 5)
+
+numberPadClear = Button(root, text = "C", command = lambda: clear())
+numberPadClear.grid(row = 2, column = 6)
 
 numberPadEqual = Button(root, text = "=", command = equalpress)
 numberPadEqual.grid(row = 4, column = 4)
