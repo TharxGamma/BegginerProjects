@@ -52,18 +52,35 @@ int main()
         }
     }
 
-    if(PlayerChoice == ComputersChoice)
+    if(PlayerChoice == ComputersChoice) 
     {
         std::cout << "Draw";
     } 
-    else if(PlayerChoice != ComputersChoice && PlayerChoice == "paper")
+    else if(PlayerChoice == "rock" && ComputersChoice == "paper")
     {
         std::cout << "You lose";
     } 
-    else
+    else if(PlayerChoice == "rock" && ComputersChoice == "scissors")
     {
-        std::cout << "You Win!";
+        std::cout << "You win!";
+    } 
+    else if(PlayerChoice == "paper" && ComputersChoice == "rock")
+    {
+        std::cout << "You win!";
     }
+    else if(PlayerChoice == "paper" && ComputersChoice == "scissors")
+    {
+        std::cout << "You lose!";
+    }
+    else if(PlayerChoice == "scissors" && ComputersChoice == "paper")
+    {
+        std::cout << "You win!";
+    }
+    else if(PlayerChoice == "scissors" && ComputersChoice == "rock")
+    {
+        std::cout << "You win!";
+    }
+    
     std::cout << ComputersChoice;
     
     return 0;
