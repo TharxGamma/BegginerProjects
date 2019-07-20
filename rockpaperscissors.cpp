@@ -52,5 +52,19 @@ int main()
         }
     }
 
+    if(PlayerChoice == ComputersChoice)
+    {
+        std::cout << "Draw";
+    } 
+    else if(PlayerChoice != ComputersChoice && PlayerChoice == "paper")
+    {
+        std::cout << "You lose";
+    } 
+    else
+    {
+        std::cout << "You Win!";
+    }
+    std::cout << ComputersChoice;
+    
     return 0;
 }
