@@ -1,11 +1,23 @@
+#define SIZEX 100 //SIZEX and SIZEY is set and defined to be used later
+#define SIZEY 30
+
 class Man
 {
-
 
     public: 
 
 	int ValueX;
 	int ValueY;
+
+	char Canvas[SIZEX][SIZEY] ; // Declare a char 2d array and set SIZEX and SIZEY
+
+	Man(int ValX, int ValY)
+	{
+		SetLocation(ValX, ValY);
+		Refresh();
+		DrawMan();
+		PrintMyMan();
+	}
 
 	void SetLocation(int ValX, int ValY)
 	{
@@ -60,10 +72,4 @@ class Man
 		}
 	}
 
-    Man() {}
-
-    Man(int ValueX, int ValueY)
-    {
-
-    }
 };
